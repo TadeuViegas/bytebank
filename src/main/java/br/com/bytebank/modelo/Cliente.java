@@ -3,8 +3,10 @@ package br.com.bytebank.modelo;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDate;
 
 @Entity
@@ -12,7 +14,8 @@ import java.time.LocalDate;
 @Data
 @Builder
 @AllArgsConstructor
-public class Cliente implements Autenticavel, Comparable<Cliente> {
+@NoArgsConstructor
+public class Cliente implements Autenticavel, Comparable<Cliente>, Serializable {
 
     @Id
     @GeneratedValue

@@ -5,7 +5,8 @@ import lombok.Data;
 import lombok.Generated;
 import lombok.experimental.SuperBuilder;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.io.Serializable;
 
 @Entity
@@ -15,10 +16,5 @@ import java.io.Serializable;
 @Generated
 @AllArgsConstructor
 public class ContaCorrente extends Conta implements Serializable {
-
-    @Id
-    @GeneratedValue
-    @Column(name = "OID_CCORRENTE")
-    private Long id;
 
 }
